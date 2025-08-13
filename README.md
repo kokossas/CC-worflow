@@ -46,6 +46,15 @@ Updates documentation and marks step as complete as per README documentation req
 
 4. **Manual Checkpoints**: Found necessary to prevent runaway implementations.
 
+## Documentation Strategy
+
+The workflow includes structured documentation requirements (detailed in CLAUDE.md):
+- **Root README**: Maintained as a technical dashboard with current project status
+- **Technical Archive** (`docs/technical-archive/`): Detailed documentation for each completed step
+- **Step Files** (`.steps/`): Implementation plans and tracking
+
+This ensures knowledge transfer and context gathering for each agent.
+
 ## Project Structure
 
 ```
@@ -57,12 +66,15 @@ Updates documentation and marks step as complete as per README documentation req
 │   ├── framework-scanner.md
 │   ├── verifier-tester.md
 │   └── debugger.md
-├── CLAUDE.md        # Main workflow orchestration
-├── README.md        # root technical README
+├── CLAUDE.md        # Main workflow orchestration & documentation requirements
+├── README.md        # Root technical dashboard
 │
 .steps/              # Step tracking files
 │
 .temp/               # Temporary verification reports
+│
+docs/
+└── technical-archive/  # Detailed step documentation (when using full workflow)
 ```
 
 ## Usage
