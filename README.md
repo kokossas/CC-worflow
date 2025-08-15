@@ -42,7 +42,14 @@ Updates documentation and marks step as complete as per README documentation req
 ## Known Limitations
 1. **Scope Creep**: The step-creator agent consistently adds features not in the original request. Manual review checkpoints are necessary.
 
-2. **Hallucinated Dependencies**: The dependency-checker sometimes identifies dependencies that don't exist, hence the need for dependency-confirmer.
+**\*EDIT\***
+
+2. ~~**Hallucinated Dependencies**: The dependency-checker sometimes identifies dependencies that don't exist, hence the need for dependency-confirmer.~~ 
+    <details>
+    <summary>Discovered this was actually a data issue on my end</summary>
+  
+  My inspect-database.ts script contained hardcoded table names that were outdated after multiple migrations. The dependency-checker was correctly identifying missing dependencies, but I was dismissing them as hallucinations. Still recommend keeping the dependency-confirmer as a safety net for other potential errors.
+  </details>
 
 4. **Manual Checkpoints**: Found necessary to prevent runaway implementations.
 
